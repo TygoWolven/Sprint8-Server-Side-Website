@@ -1,0 +1,17 @@
+<%- include('./partials/head') %>
+
+<a href="/" id="terug-button">Terug</a>
+
+<section class="student-detailed">
+
+    <img src="<%= person.avatar.includes('https') ? person.avatar : '/images/pf-not-found.png' %>" height="200px">
+
+    <h2><%= person.name %> <%= person.prefix %> <%= person.surname %></h2>
+
+    <p><%= person.bio %></p>
+    
+</section>
+
+<div class="highlight"></div>
+
+<%- include('./partials/foot') %>

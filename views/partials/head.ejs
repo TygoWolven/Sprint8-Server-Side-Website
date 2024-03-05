@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="/styles/style.css">
+
+    <!-- Link to Javascript -->
+    <script src="/scripts/script.js" defer></script>
+
+    <!-- Link to Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Link to my Website Icon -->
+    <link rel="icon" href="/images/rocket-ico.webp">
+    
+    <!-- Title for the Website -->
+    <title>Tygo Wolven | Squadpage</title>
+  </head>
+  <body>
+
+    <nav>
+      <div class="buttons">
+          <a href="#" id="menu-button">Filteren en Sorteren</a>
+          <a href="#" id="message-menu-button">Berichten</a>
+      </div>
+    
+      <div class="menu">
+        <div class="system">
+          <div class="filters"> 
+            <h2>Filteren op:</h2>
+            <ul>
+              <li><a href="#">Naam</a></li>
+              <hr>
+              <li><a href="#">Achternaam</a></li>
+              <hr>
+              <li><a href="#">Leeftijd</a></li>
+              <hr>
+              <li><a href="/squad/3">Squad 1E</a></li>
+              <hr>
+              <li><a href="/squad/4">Squad 1D</a></li>
+              <hr>
+              <li><a href="/views/index2.ejs">Squad 1F</a></li>  
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+      <div class="message-menu">
+          <div class="system">
+            <div class="messages">
+              <h2>Huidige berichten:</h2>
+              <ul>
+                <% messages.forEach(message => { %>
+                  <li><%= message %></li>
+                <% }) %>
+              </ul>
+            </div>
+          </div>
+          <div class="submit-message">
+            <h2>Bericht:</h2>
+            <form method="post" action="/">
+              <textarea required name="bericht"></textarea> <br>
+              <button type="submit" id="submit-button">Versturen</button>
+            </form>
+          </div>
+      </div>
+    </nav>
+
+    <div class="planet">
+      <img src="/images/saturn.png" alt="Saturnus on background">
+    </div>
+    <div class="gradient"></div>
+    <div class="light"></div>

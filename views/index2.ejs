@@ -1,0 +1,26 @@
+<%- include('./partials/head') %>
+
+<section>
+  <h1>Squadpage FDND</h1>
+
+  <ul class="student-list">
+    <% persons.forEach(person => { %>
+      <% if (person.squad_id === 5){ %>
+      <li class="students">
+        <div class="star"></div>
+        <a href="./person/<%= person.id %>">
+          <%= person.name %> <%= person.prefix %> <br> <%= person.surname %>
+        </a>
+      </li>
+      <% } %>
+    <% }) %>
+  </ul>
+</section>
+
+<div class="planet">
+  <img src="/images/saturn.png" alt="Saturnus on background">
+</div>
+<div class="gradient"></div>
+<div class="light"></div>
+
+<%- include('./partials/foot') %>

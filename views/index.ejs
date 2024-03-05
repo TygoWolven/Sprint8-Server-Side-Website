@@ -1,0 +1,26 @@
+<%- include('./partials/head') %>
+
+<section class="start-page">
+  <div>
+    <h2>Laten we naar<br>de ruimte gaan!</h2>
+    <p id="launch-button">Launch</p>
+    <img src="/images/rocket.webp" alt="Space Rocket">
+  </div>
+</section>
+
+<section>
+  <h1>Squadpage FDND</h1>
+
+  <ul class="student-list">
+    <% persons.forEach(person => { %> 
+      <li class="students">
+        <div class="star"></div>
+        <a href="./person/<%= person.id %>">
+          <%= person.name %> <%= person.prefix %> <br> <%= person.surname %>
+        </a>
+      </li>
+    <% }) %>
+  </ul>
+</section>
+
+<%- include('./partials/foot') %>
