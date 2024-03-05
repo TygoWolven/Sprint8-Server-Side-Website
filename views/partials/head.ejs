@@ -14,63 +14,9 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- Link to my Website Icon -->
-    <link rel="icon" href="/images/rocket-ico.webp">
+    <link rel="icon" href="/images/">
     
     <!-- Title for the Website -->
-    <title>Tygo Wolven | Squadpage</title>
+    <title>Tygo Wolven | De Hallen</title>
   </head>
   <body>
-
-    <nav>
-      <div class="buttons">
-          <a href="#" id="menu-button">Filteren en Sorteren</a>
-          <a href="#" id="message-menu-button">Berichten</a>
-      </div>
-    
-      <div class="menu">
-        <div class="system">
-          <div class="filters"> 
-            <h2>Filteren op:</h2>
-            <ul>
-              <li><a href="#">Naam</a></li>
-              <hr>
-              <li><a href="#">Achternaam</a></li>
-              <hr>
-              <li><a href="#">Leeftijd</a></li>
-              <hr>
-              <li><a href="/squad/3">Squad 1E</a></li>
-              <hr>
-              <li><a href="/squad/4">Squad 1D</a></li>
-              <hr>
-              <li><a href="/views/index2.ejs">Squad 1F</a></li>  
-            </ul>
-          </div>
-        </div>
-      </div>
-    
-      <div class="message-menu">
-          <div class="system">
-            <div class="messages">
-              <h2>Huidige berichten:</h2>
-              <ul>
-                <% messages.forEach(message => { %>
-                  <li><%= message %></li>
-                <% }) %>
-              </ul>
-            </div>
-          </div>
-          <div class="submit-message">
-            <h2>Bericht:</h2>
-            <form method="post" action="/">
-              <textarea required name="bericht"></textarea> <br>
-              <button type="submit" id="submit-button">Versturen</button>
-            </form>
-          </div>
-      </div>
-    </nav>
-
-    <div class="planet">
-      <img src="/images/saturn.png" alt="Saturnus on background">
-    </div>
-    <div class="gradient"></div>
-    <div class="light"></div>
