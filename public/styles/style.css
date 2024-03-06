@@ -35,7 +35,42 @@
 }
 
 /* === General Element Styling === */
-a:hover {
+i {
+    font-size: 2em;
+}
+
+a:hover, i:hover {
     color: var(--darkgreen);
     transition: var(--tran1);
+}
+
+/* === Footer === */
+footer {
+    background: var(--darkblue);
+
+    & > div {
+        padding: 2em 4em;
+        text-align: center;
+    }
+
+    & h3 {
+        margin-bottom: 0.25em;
+        text-transform: uppercase;
+    }
+
+    & h3, a, i, p {
+        color: var(--white);
+    }
+}
+
+@media (min-width: 1000px) {
+    /* === Footer === */
+    footer {
+        display: flex;
+        justify-content: center;
+
+        & > div {
+            text-align: left;
+        }
+    }
 }
