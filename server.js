@@ -26,6 +26,10 @@ app.get('/', function(request, response) {
 })
 
 app.get('/contact', function(request, response) {
+	response.render('contact')
+})
+
+app.get('/contact', function(request, response) {
 
 	fetchJson('https://fdnd-agency.directus.app/admin/content/dh_services').then((pizzasDataUitDeAPI) => {
 		response.render('contact', {pizzas: pizzasDataUitDeAPI.data})
