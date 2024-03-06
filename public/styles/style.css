@@ -12,6 +12,9 @@
     --lightgreen: #D4e9DB;
     --white: #FFFFFF;
     --grey: #DFE4E5;
+
+    /* === Transitions === */
+    --tran1: 0.25s ease;
 }
 
 /* === General Page Styling === */
@@ -22,10 +25,17 @@
     scroll-behavior: smooth;
 
     font-family: Inter;
+    color: var(--darkblue);
     text-decoration: none;
     list-style: none;
 }
 
 *::-webkit-scrollbar {
     display: none;
+}
+
+/* === General Element Styling === */
+a:hover {
+    color: var(--darkgreen);
+    transition: var(--tran1);
 }
