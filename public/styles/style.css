@@ -39,9 +39,25 @@ i {
     font-size: 2em;
 }
 
+a, i {
+    transition: var(--tran1);
+}
+
 a:hover, i:hover {
     color: var(--darkgreen);
-    transition: var(--tran1);
+}
+
+/* === Contact Section === */
+.contact-wrapper {
+    display: flex;
+}
+
+.contact-container {
+    margin: 2em;
+
+    & ul {
+        margin: 0.25em 0 2em 0;
+    }
 }
 
 /* === Footer === */
@@ -63,6 +79,7 @@ footer {
     }
 }
 
+/* === Media Query === */
 @media (min-width: 1000px) {
     /* === Footer === */
     footer {
