@@ -20,9 +20,12 @@ app.use(express.static('public'))
 app.use(express.urlencoded({extended: true}))
 
 // TODO: routes voor deze pizza applicatie..
-
 app.get('/', function(request, response) {
-	response.render('index')
+
+	fetchJson('https://fdnd-agency.directus.app/items/dh_services').then((HallenInfoAPI) => {
+		response.render('index', {hallenInfo: HallenInfoAPI.data})
+	});
+	
 })
 
 // Poortnummer voor de LocalHost
