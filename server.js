@@ -19,7 +19,7 @@ app.use(express.static('public'))
 // Zorg dat werken met request data makkelijker wordt
 app.use(express.urlencoded({extended: true}))
 
-// TODO: routes voor deze pizza applicatie..
+// TODO: routes voor deze pizza applicatie..	
 app.get('/', function(request, response) {
 
 	fetchJson('https://fdnd-agency.directus.app/items/dh_services').then((HallenInfoAPI) => {

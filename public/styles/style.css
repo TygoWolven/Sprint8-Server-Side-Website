@@ -15,6 +15,7 @@
 
     /* === Padding & Margin === */
     --padding: 8px 16px;
+    --margin-1: 0.25em;
 
     /* === Borders === */
     --border: 1px solid; 
@@ -22,6 +23,7 @@
 
     /* === Transitions === */
     --tran1: 0.25s ease;
+    --tran2: 0.5s ease;
 }
 
 /* === General Page Styling === */
@@ -81,7 +83,8 @@ section {
     background: var(--dark-grey);
 
     /* === All Section Images === */
-    & > img {
+    & > img,
+      > .gateBackground {
         position: absolute;
         top: 0;
         left: 0;
@@ -119,11 +122,26 @@ section {
     height: 100%;
 
     background: var(--medium-green);
-    transition: var(--tran-2);
+    transition: var(--tran1);
     transform: skew(20deg);
     opacity: 20%;
 
     animation: sectionTagGlint 6s ease infinite;    
+}
+
+/* === Home Section === */
+#home {
+    & .gateBackground {
+        background: linear-gradient( to right,
+            lightgrey 30%,
+            transparent 30% 70%,
+            lightgrey 70%
+        ), linear-gradient(
+            lightgrey 20%,
+            transparent 20% 80%,
+            lightgrey 80%
+        );
+    }
 }
 
 /* === Animation for sectionTag === */
@@ -157,7 +175,7 @@ footer {
     background: var(--darkblue);
 
     & > div {
-        padding: 2em 4em;
+        padding: 4em;
         text-align: center;
     }
 
