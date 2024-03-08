@@ -132,6 +132,7 @@ section {
 /* === Home Section === */
 #home {
     & .gateBackground {
+        position: fixed;
         background: linear-gradient( to right,
             lightgrey 30%,
             transparent 30% 70%,
