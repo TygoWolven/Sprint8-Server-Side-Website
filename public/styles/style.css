@@ -83,8 +83,7 @@ section {
     background: var(--creme);
 
     /* === All Section Images === */
-    & > img,
-      > .gateBackground {
+    & > img {
         position: absolute;
         top: 0;
         left: 0;
@@ -127,6 +126,15 @@ section {
     opacity: 20%;
 
     animation: sectionTagGlint 5s ease infinite;    
+}
+
+.sectionNumber {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    
+    font-size: 5em;
+    color: var(--darkcreme);
 }
 
 /* === Animation for sectionTag === */
