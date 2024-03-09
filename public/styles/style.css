@@ -150,6 +150,18 @@ section {
     }
 }
 
+/* === Navigation === */
+#navigation {
+    display: flex;
+    position: fixed;
+    z-index: 100;
+
+    & li {
+        padding: 1em;
+        margin: 0 1em;
+    }
+}
+
 /* === Home Section === */
 /* #home {
 
@@ -158,6 +170,7 @@ section {
 /* === Activity Section === */
 #activity {
     height: fit-content;
+    padding: 5em;
 
     .activityList {
         display: flex;
@@ -168,10 +181,11 @@ section {
         margin: 1em 0;
 
         max-width: 50em;
-        background: var(--darkcreme);
+        border: var(--border);
 
         & img {
             width: 15em;
+            margin: 1em;
         }
         
         & .description {
@@ -225,3 +239,7 @@ footer {
         }
     }
 }
+
+/* === Z-Index Usage === */
+/* sectionTag: 25 */
+/* Navigation: 100 */

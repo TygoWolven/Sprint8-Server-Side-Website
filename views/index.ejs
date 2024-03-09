@@ -8,12 +8,6 @@
     <!-- Title -->
     <h1>De Hallen</h1>
 
-    <!-- Info -->
-    <p>Beschrijving...</p>
-
-    <!-- Background -->
-    <div class="gateBackground"></div>
-
   </section>
 
 
@@ -59,6 +53,8 @@
           <% if (database.image) { %>
             <img src="https://fdnd-agency.directus.app/assets/<%= database.image %>">
           <% } %>
+
+          <hr>
         
           <div class="description">
             <a href="/initiatief/<%= database.id %>"><h3><%= database.title %></h3></a>
