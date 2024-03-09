@@ -24,7 +24,29 @@
     </p>
 
     <!-- Section Title -->
-    <h2>Bekijk onze <span class="extraBold">activiteiten</span></h2>
+    <h2>Bekijk onze <span class="extraBold">initiatieven</span></h2>
+
+    <% hallenData.forEach(function(database) { %>
+      <ul class="activityList">
+        <li class="activityItem">
+          <% if (database.image) { %>
+            <img src="https://fdnd-agency.directus.app/assets/<%= database.image %>">
+          <% } %>
+        
+          <div class="description">
+            <a href="/vraag-aanbod/<%= database.id %>"><h3><%= database.title %></h3></a>
+            
+            <p>
+                <span><%= database.start_date %> - <%= database.end_date %></span>
+            </p>
+            
+            <p><%- database.short_description %></p>
+
+            <button class="button">Meer informatie</button>
+          </div>
+        </li>
+      </ul>
+    <% }) %>
 
   </section>
 

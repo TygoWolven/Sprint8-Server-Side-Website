@@ -1,0 +1,41 @@
+<%- include('./partials/head', {current: '/initiatief'}); %>
+
+
+<h1>Vraag & Aanbod</h1>
+
+<h2>Vraag</h2>
+
+<% services.forEach(function(service) { %>
+    <!-- Laat alleen de service zien als het type een vraag is -->
+    <% if (service.type == 'vraag' ) { %>
+	<article>
+		<h3><%= service.title %></h3>
+
+
+        <%- service.long_description %>
+
+	</article>
+    <% } %>
+<% }) %>
+
+
+
+<h2>Aanbod</h2>
+
+<% services.forEach(function(service) { %>
+    <!-- Laat alleen de service zien als het typ eeen aanbod is -->
+    <% if (service.type == 'aanbod' ) { %>
+	<article>
+        <p><%= service.type %></p>
+		<h3><%= service.title %></h3>
+
+
+        <%- service.long_description %>
+
+	</article>
+    <% } %>
+    <!-- Als er geen aanbod is komt er dit te staan -->
+    <p>Er is helaas geen aanbod</p>
+<% }) %>
+
+<%- include('./partials/foot') %>
