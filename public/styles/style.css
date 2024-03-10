@@ -9,7 +9,7 @@
     /* === Colors === */
     --black: #000000;
     --brown: #5c472f;
-    --darkcreme: #EDE6DD;
+    --darkcreme: rgba(233, 222, 211, 0.5);
     --creme: #F6F3EE;
     --white: #FFFFFF;
 
@@ -157,7 +157,10 @@ section {
     display: flex;
     position: fixed;
     justify-content: space-between;
-    background: var(--darkcreme);
+
+
+    background: rgba(233, 222, 211, 0.5);
+    backdrop-filter: blur(12px);
 }
 .navigation {
     display: flex;
@@ -226,7 +229,7 @@ section {
 
 /* === Footer === */
 footer {
-    background: var(--darkcreme);
+    background: #f0e8e1;
 
     & > div {
         padding: 4em;
