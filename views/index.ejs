@@ -25,7 +25,7 @@
        01
     </p>
     <h2><span class="extraBold">Wie</span> zijn wij?</h2>
-    <p>Wij van de Hallen, zijn een platform gericht naar diverse buurtinitiatieven. Wij bieden tal aan </p>
+    <p>Wij van de Hallen, zijn een platform gericht naar diverse buurtinitiatieven.</p>
 
   </section>
 
@@ -54,8 +54,6 @@
             <img src="https://fdnd-agency.directus.app/assets/<%= database.image %>">
           <% } %>
 
-          <hr>
-        
           <div class="description">
             <a href="/initiatief/<%= database.id %>"><h3><%= database.title %></h3></a>
 
@@ -64,8 +62,6 @@
             </p>
             
             <p><%- database.short_description %></p>
-
-            <button class="button">Meer informatie</button>
           </div>
         </li>
       </ul>
@@ -89,8 +85,15 @@
     </p>
 
     <!-- Section Title -->
-    <h2>Ben je op zoek naar een <span class="extraBold">initiatief?</span></h2>
+    <div class="gridLayout">
+      <div class="leftSide">
+        <h2>Ben je op zoek naar een <span class="extraBold">initiatief?</span></h2>
+        <p>Op zoek naar een balonnenclown? DJ voor een huisfeest? Het maakt niet uit wat! Vul dan het formulier in, en wie weet vind je de juiste persoon waar jij naar op zoek bent.</p>    
+      </div>
+      <div class="rightSide">
 
+      </div>
+    </div>
   </section>
 
 

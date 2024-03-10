@@ -7,11 +7,11 @@
 /* === Custom Properties === */
 :root {
     /* === Colors === */
-    --black: #000000;
-    --brown: #5c472f;
-    --darkcreme: rgba(233, 222, 211, 0.5);
-    --creme: #F6F3EE;
     --white: #FFFFFF;
+    --grey: #A9A9A9;
+    --lightgrey: #dde1e7;
+    --darkgrey: #383838;
+    --black: #000000;
 
     /* === Padding & Margin === */
     --padding: 8px 16px;
@@ -62,7 +62,7 @@ a, i {
 }
 
 a:hover, i:hover {
-    color: var(--brown);
+    color: var(--darkgrey);
 }
 
 h2 {
@@ -80,7 +80,7 @@ section {
     flex-direction: column;
     justify-content: center;
 
-    background: var(--creme);
+    background: var(--lightgrey);
 
     /* === All Section Images === */
     & > img {
@@ -102,12 +102,11 @@ section {
     z-index: 25;
 
     padding: var(--padding);
-    color: var(--brown);
+    color: var(--darkgrey);
 
-    border: var(--border) var(--brown);
+    border: var(--border) var(--darkgrey);
     border-radius: var(--round);
     pointer-events: none;
-    opacity: 50%;
 }
 
 .sectionTag::before {
@@ -120,7 +119,7 @@ section {
     width: 50%;
     height: 100%;
 
-    background: var(--brown);
+    background: var(--darkgrey);
     transition: var(--tran1);
     transform: skew(20deg);
     opacity: 20%;
@@ -134,7 +133,7 @@ section {
     left: 25px;
     
     font-size: 5em;
-    color: var(--darkcreme);
+    color: var(--darkgrey);
 }
 
 /* === Animation for sectionTag === */
@@ -158,16 +157,18 @@ section {
     position: fixed;
     justify-content: space-between;
 
-
-    background: rgba(233, 222, 211, 0.5);
-    backdrop-filter: blur(12px);
+    background: var(--darkgrey);
 }
 .navigation {
     display: flex;
 
     & li {
-        padding: 2em;
+        padding: 1.5em;
         margin: 0 1em;
+    }
+
+    & li, a, span {
+        color: var(--lightgrey);
     }
 }
 
@@ -179,7 +180,7 @@ section {
 /* === Activity Section === */
 #activity {
     height: fit-content;
-    padding: 5em;
+    padding: 8em;
 
     .activityList {
         display: flex;
@@ -190,8 +191,8 @@ section {
         margin: 1em 0;
 
         max-width: 50em;
-        border: var(--border);
-        background: var(--darkcreme);
+        box-shadow: -10px -10px 14px #FFFFFF73, 10px 10px 14px #6b717c49;
+        border-radius: 20px;
 
         & img {
             width: 15em;
@@ -204,11 +205,6 @@ section {
 
             & p {
                 margin: 0.5em 0;
-            }
-
-            & button {
-                position: absolute;
-                bottom: 0;
             }
         }
     }
@@ -229,7 +225,7 @@ section {
 
 /* === Footer === */
 footer {
-    background: #f0e8e1;
+    background: var(--darkgrey);
 
     & > div {
         padding: 4em;
@@ -238,6 +234,10 @@ footer {
 
     & h3 {
         margin-bottom: 0.25em;
+    }
+
+    & h3, p, a, i {
+        color: var(--lightgrey);
     }
 }
 
