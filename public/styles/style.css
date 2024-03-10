@@ -151,13 +151,19 @@ section {
 }
 
 /* === Navigation === */
-#navigation {
+#primary-navigation {
+    width: 100%;
+    z-index: 100;
     display: flex;
     position: fixed;
-    z-index: 100;
+    justify-content: space-between;
+    background: var(--darkcreme);
+}
+.navigation {
+    display: flex;
 
     & li {
-        padding: 1em;
+        padding: 2em;
         margin: 0 1em;
     }
 }
@@ -182,6 +188,7 @@ section {
 
         max-width: 50em;
         border: var(--border);
+        background: var(--darkcreme);
 
         & img {
             width: 15em;
@@ -191,11 +198,15 @@ section {
         & .description {
             position: relative;
             margin: 1em;
-        }
 
-        & button {
-            position: absolute;
-            bottom: 0;
+            & p {
+                margin: 0.5em 0;
+            }
+
+            & button {
+                position: absolute;
+                bottom: 0;
+            }
         }
     }
 }
