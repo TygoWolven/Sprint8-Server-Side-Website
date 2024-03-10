@@ -85,13 +85,20 @@
     </p>
 
     <!-- Section Title -->
-    <div class="gridLayout">
-      <div class="leftSide">
+    <div class="submitContent flexLayout">
+      <div>
         <h2>Ben je op zoek naar een <span class="extraBold">initiatief?</span></h2>
         <p>Op zoek naar een balonnenclown? DJ voor een huisfeest? Het maakt niet uit wat! Vul dan het formulier in, en wie weet vind je de juiste persoon waar jij naar op zoek bent.</p>    
       </div>
-      <div class="rightSide">
-
+      <div>
+        <form method="post" action="/">
+          <h3>Wat zoek je?</h3>
+          <textarea required name="bericht"></textarea> <br>
+          
+          <h3>Voor wanneer?</h3>
+          <textarea required name="bericht"></textarea> <br>
+          <button type="submit" id="submit-button">Aanvraag indienen</button>
+        </form>
       </div>
     </div>
   </section>

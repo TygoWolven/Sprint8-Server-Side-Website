@@ -52,6 +52,10 @@
     text-transform: uppercase;
 }
 
+.flexLayout {
+    display: flex;
+}
+
 /* === General Element Styling === */
 i {
     font-size: 2em;
@@ -66,7 +70,7 @@ a:hover, i:hover {
 }
 
 h2 {
-    margin: 0.5em;
+    margin: 0.5em 0;
 }
 
 section {
@@ -206,6 +210,17 @@ section {
             & p {
                 margin: 0.5em 0;
             }
+        }
+    }
+}
+
+/* === Submit Activity Section === */
+.submitContent {
+    & div {
+        margin: 2em;
+        
+        & p {
+            max-width: 45ch;
         }
     }
 }
