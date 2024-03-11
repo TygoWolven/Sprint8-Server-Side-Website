@@ -91,7 +91,6 @@ section {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-
     background: var(--lightgrey);
 }
 
@@ -181,6 +180,31 @@ section {
     transform: translateY(0);
 }
 
+#buttonChevron {
+    animation: wiggleChevron 2s infinite;
+}
+
+@keyframes wiggleChevron {
+    0% {
+        translate: 0;
+    }
+    10% {
+        translate: 0 10px;
+    }
+    20% {
+        translate: 0;
+    }
+    30% {
+        translate: 0 10px;
+    }
+    40% {
+        translate: 0;
+    }
+    100% {
+        translate: 0;
+    }
+}
+
 .rotateChevron {
     transform: rotate(180deg);
 }
@@ -215,9 +239,6 @@ section {
 }
 
 /* === Home Section === */
-/* #home {
-
-} */
 
 /* === About Section === */
 #about {
@@ -236,6 +257,7 @@ section {
 .activityList {
     flex-wrap: wrap;
     justify-content: center;
+    width: 80%;
 }
 
 .activityItem {
@@ -247,6 +269,9 @@ section {
     transition: var(--tran1);
     box-shadow: var(--shadow);
 
+    display: grid;
+    grid-template-rows: 4fr 3fr 1fr;
+
     & img {
         width: 23em;
         height: 15em;
@@ -256,7 +281,6 @@ section {
     }
     
     & .description {
-        position: relative;
         margin: 1em;
 
         & p {
@@ -270,6 +294,7 @@ section {
 }
 
 .infoButton:hover {
+    cursor: pointer;
     box-shadow: var(--shadow);
 }
 
@@ -284,6 +309,19 @@ section {
 .submitContent {
     & div {
         margin: 2em;
+    }
+}
+
+div.alignRight {
+    position: relative;
+
+    & .sectionTag {
+        position: absolute;
+        right: 0;
+    }
+
+    & h2 {
+        margin-top: 2em;
     }
 }
 
@@ -312,6 +350,11 @@ footer {
     & h3, p, a, i {
         color: var(--lightgrey);
     }
+}
+
+footer a:hover,
+footer i:hover {
+    opacity: 60%;
 }
 
 /* === Media Query === */
