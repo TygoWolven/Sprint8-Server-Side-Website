@@ -21,7 +21,6 @@ app.use(express.urlencoded({extended: true}))
 
 // TODO: routes voor deze pizza applicatie..	
 app.get('/', function(request, response) {
-
 	fetchJson('https://fdnd-agency.directus.app/items/dh_services').then((HallenDataUitDeAPI) => {
 		response.render('index', {
 			hallenData: HallenDataUitDeAPI.data
@@ -29,11 +28,10 @@ app.get('/', function(request, response) {
 	})
 })
 
-app.get('/initiatief', function(request, response) {
-	
-	fetchJson('https://fdnd-agency.directus.app/items/dh_services').then((HallenDataUitDeAPI) => {
+app.get('/initiatief/:initiatief', function(request, response) {
+	fetchJson('https://fdnd-agency.directus.app/items/dh_services?filter={"id":' + request.params.initiatief + '}').then((HallenDataUitDeAPI) => {
 		response.render('initiatief', {
-			hallenData: HallenDataUitDeAPI.data
+			hallenData: HallenDataUitDeAPI.data[0]
 		})
 	})
 })

@@ -1,4 +1,19 @@
 <%- include('./partials/head', {current: '/initiatief'}); %>
 
+<!-- Home Section -->
+<section id="detail">
+  <% if (hallenData.image) { %>
+      <img src="https://fdnd-agency.directus.app/assets/<%= hallenData.image %>">
+  <% } %>
+  <div class="description">
+      <a href="/initiatief/<%= hallenData.id %>"><h3><%= hallenData.title %></h3></a>
+      <p>
+          <span><%= hallenData.start_date %> - <%= hallenData.end_date %></span>
+      </p>
+      
+      <p><%- hallenData.short_description %></p>
+  </div>
+  
+</section>
 
 <%- include('./partials/foot') %>
