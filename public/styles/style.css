@@ -77,11 +77,6 @@ a, i {
     transition: var(--tran1);
 }
 
-a:hover,
-.infoButton:hover {
-    box-shadow: var(--shadow);
-}
-
 h2 {
     margin: 0.5em 0;
 }
@@ -201,6 +196,10 @@ section {
             border-radius: var(--round);
         }
     }
+
+    & li a:hover {
+        box-shadow: var(--shadow);
+    }
 }
 
 #navigationButton {
@@ -229,6 +228,16 @@ section {
 }
 
 /* === Activity Section === */
+#activity {
+    height: fit-content;
+    padding: 100px 0 150px 0;
+}
+
+.activityList {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .activityItem {
     margin: 1em;
     text-align: center;
@@ -258,6 +267,10 @@ section {
 
 .activityItem:hover {
     box-shadow: none;
+}
+
+.infoButton:hover {
+    box-shadow: var(--shadow);
 }
 
 /* === Detail Section === */

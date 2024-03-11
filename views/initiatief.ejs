@@ -7,11 +7,17 @@
   <% } %>
   <div class="description">
       <a href="/initiatief/<%= hallenData.id %>"><h3><%= hallenData.title %></h3></a>
-      <p>
-          <span><%= hallenData.start_date %> - <%= hallenData.end_date %></span>
-      </p>
+
+      <% if (hallenData.start_date) { %>
+        <p>
+          <span><%= hallenData.start_date %>
+          <% if (hallenData.end_date) { %>
+            tot <%= hallenData.end_date %></span>
+          <% } %>
+        </p>
+      <% } %>
       
-      <p><%- hallenData.short_description %></p>
+      <p><%- hallenData.long_description %></p>
   </div>
   
 </section>
