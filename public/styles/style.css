@@ -21,9 +21,13 @@
     --border: 1px solid; 
     --round: 500px;
 
+    /* === Box-Shadows === */
+    --shadow: -10px -10px 14px #FFFFFF73, 10px 10px 14px #6b717c49;
+
+
     /* === Transitions === */
-    --tran1: 0.25s ease;
-    --tran2: 0.5s ease;
+    --tran1: 0.5s ease;
+    --tran2: 1s ease;
 }
 
 /* === General Page Styling === */
@@ -65,8 +69,8 @@ a, i {
     transition: var(--tran1);
 }
 
-a:hover, i:hover {
-    color: var(--darkgrey);
+a:hover {
+    box-shadow: var(--shadow);
 }
 
 h2 {
@@ -95,9 +99,9 @@ section {
     padding: var(--padding);
     color: var(--darkgrey);
 
-    border: var(--border) var(--darkgrey);
     border-radius: var(--round);
     pointer-events: none;
+    box-shadow: var(--shadow);
 }
 
 .sectionTag::before {
@@ -130,43 +134,75 @@ section {
 /* === Animation for sectionTag === */
 @keyframes sectionTagGlint {
     0% {
-        left: -100%;
+        left: -110%;
     }
-    25% {
-        left: 100%;
+    40% {
+        left: 110%;
     }
     100% {
-        left: 100%;
+        left: 110%;
     }
 }
 
 /* === Navigation === */
-#primary-navigation {
-    width: 100%;
-    z-index: 100;
+.primary-navigation {
     display: flex;
+    flex-direction: column;
     position: fixed;
+    left: 0;
+    right: 0;
+    width: fit-content;
+    z-index: 100;
+    margin: 1em auto;
     justify-content: space-between;
 
-    background: var(--darkgrey);
+    border-radius: var(--round);
+    box-shadow: var(--shadow);
+    background: var(--lightgrey);
+
+    transform: translateY(-100%);
+    transition: var(--tran1);
 }
+
+.openNav {
+    transform: translateY(0);
+}
+
+.rotateChevron {
+    transform: rotate(180deg);
+}
+
 .navigation {
     display: flex;
 
     & li {
+        margin: 0 0.5em;
         padding: 1.5em;
-        margin: 0 1em;
-    }
 
-    & li, a, span {
-        color: var(--lightgrey);
+        & a {
+            padding: 1em;
+            border-radius: var(--round);
+        }
     }
+}
+
+#navigationButton {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 6em auto;
+
+    width: fit-content;
+    background: none;
+    cursor: pointer;
+    border: none;
 }
 
 /* === Home Section === */
 /* #home {
 
 } */
+
 
 /* === Activity Section === */
 #activity {
@@ -182,7 +218,7 @@ section {
         text-align: center;
 
         max-width: 25em;
-        box-shadow: -10px -10px 14px #FFFFFF73, 10px 10px 14px #6b717c49;
+        box-shadow: var(--shadow);
         border-radius: 20px;
 
         & img {
