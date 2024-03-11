@@ -13,19 +13,27 @@
 
   <!-- About Section -->
   <section id="about">
-
-    <!-- Section Tag -->
-    <p class="sectionTag capsLock extraBold" 
-       aria-hidden="true">
-       Over de Hallen
-    </p>
     <!-- Section Number -->
     <p class="sectionNumber extraBold"
        aria-hidden="true">
        01
     </p>
-    <h2><span class="extraBold">Wie</span> zijn wij?</h2>
-    <p>Wij van de Hallen, zijn een platform gericht naar diverse buurtinitiatieven.</p>
+
+    <div class="aboutContent flexLayout">
+      <img src="/images/dehallenscenery.jpg" alt="Sfeer in De Hallen">
+      <div>
+        <!-- Section Tag -->
+        <p class="sectionTag capsLock extraBold" 
+           aria-hidden="true">
+           Over dit platform
+        </p>
+        <h2><span class="extraBold">Waarom</span> dit platform?</h2>
+        <p class="textArea">
+           Dit platform is gericht naar het aanbieden of aanvragen van diverse buurtinitiatieven. In de meeste gevallen 
+           is het moeilijk om de juiste persoon voor jouw klus te vinden, en daarom is dit platform ontwikkeld!
+        </p>
+      </div>
+    </div>
 
   </section>
 
@@ -47,8 +55,8 @@
     <!-- Section Title -->
     <h2>Bekijk onze <span class="extraBold">initiatieven</span></h2>
 
-    <% hallenData.forEach(function(database) { %>
-      <ul class="activityList">
+    <ul class="activityList flexLayout">
+      <% hallenData.forEach(function(database) { %>
         <li class="activityItem">
           <% if (database.image) { %>
             <img src="https://fdnd-agency.directus.app/assets/<%= database.image %>">
@@ -57,15 +65,22 @@
           <div class="description">
             <a href="/initiatief/<%= database.id %>"><h3><%= database.title %></h3></a>
 
-            <p>
-                <span><%= database.start_date %> - <%= database.end_date %></span>
-            </p>
+            <% if (database.start_date) { %>
+              <p>
+                <span><%= database.start_date %>
+                <% if (database.end_date) { %>
+                  tot <%= database.end_date %></span>
+                <% } %>
+              </p>
+            <% } %>
             
             <p><%- database.short_description %></p>
+
+            <button class="infoButton capsLock extraBold">Meer informatie</button>
           </div>
         </li>
-      </ul>
-    <% }) %>
+      <% }) %>
+    </ul>
 
   </section>
 
@@ -73,11 +88,6 @@
   <!-- Submit Activity Section -->
   <section id="submitactivity">
 
-    <!-- Section Tag -->
-    <p class="sectionTag capsLock extraBold" 
-       aria-hidden="true">
-       Initiatief Aanvragen
-    </p>
     <!-- Section Number -->
     <p class="sectionNumber extraBold"
        aria-hidden="true">
@@ -86,9 +96,17 @@
 
     <!-- Section Title -->
     <div class="submitContent flexLayout">
-      <div>
+      <div class="alignRight">
+    <!-- Section Tag -->
+        <p class="sectionTag capsLock extraBold" 
+           aria-hidden="true">
+           Initiatief Aanvragen
+        </p>
         <h2>Ben je op zoek naar een <span class="extraBold">initiatief?</span></h2>
-        <p>Op zoek naar een balonnenclown? DJ voor een huisfeest? Het maakt niet uit wat! Vul dan het formulier in, en wie weet vind je de juiste persoon waar jij naar op zoek bent.</p>    
+        <p class="textArea">
+          Op zoek naar een balonnenclown? DJ voor een huisfeest? Het maakt niet uit wat! Vul dan het 
+          formulier in, en wie weet vind je de juiste persoon waar jij naar op zoek bent.
+        </p>    
       </div>
       <div>
         <form method="post" action="/">
@@ -122,7 +140,7 @@
     <h2>Heb je <span class="extraBold">vragen?</span></h2>
 
     <!-- Contact Info -->
-    <div class="contact-wrapper">
+    <div class="contact-wrapper flexLayout">
       <div class="contact-container">
         <h3>Hotel de Hallen</h3>
         <ul>

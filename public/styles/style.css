@@ -60,6 +60,14 @@
     display: flex;
 }
 
+.textArea {
+    max-width: 47ch;
+}
+
+.alignRight {
+    text-align: right;
+}
+
 /* === General Element Styling === */
 i {
     font-size: 2em;
@@ -69,7 +77,8 @@ a, i {
     transition: var(--tran1);
 }
 
-a:hover {
+a:hover,
+.infoButton:hover {
     box-shadow: var(--shadow);
 }
 
@@ -98,6 +107,7 @@ section {
 
     padding: var(--padding);
     color: var(--darkgrey);
+    width: fit-content;
 
     border-radius: var(--round);
     pointer-events: none;
@@ -131,6 +141,15 @@ section {
     color: var(--darkgrey);
 }
 
+.infoButton {
+    background: none;
+    border: none;
+    border-radius: var(--round);
+    padding: 1em;
+    color: var(--darkgrey);
+    transition: var(--tran1);
+}
+
 /* === Animation for sectionTag === */
 @keyframes sectionTagGlint {
     0% {
@@ -146,7 +165,6 @@ section {
 
 /* === Navigation === */
 .primary-navigation {
-    display: flex;
     flex-direction: column;
     position: fixed;
     left: 0;
@@ -173,7 +191,6 @@ section {
 }
 
 .navigation {
-    display: flex;
 
     & li {
         margin: 0 0.5em;
@@ -203,41 +220,44 @@ section {
 
 } */
 
+/* === About Section === */
+#about {
+    & img {
+        width: 20em;
+        object-fit: contain;
+    }
+}
 
 /* === Activity Section === */
-#activity {
-    height: fit-content;
-    padding: 8em;
+.activityItem {
+    margin: 1em;
+    text-align: center;
 
-    .activityList {
-        display: flex;
-    }
+    max-width: 25em;
+    border-radius: 20px;
+    transition: var(--tran1);
+    box-shadow: var(--shadow);
 
-    .activityItem {
-        margin: 1em 0;
-        text-align: center;
-
-        max-width: 25em;
-        box-shadow: var(--shadow);
+    & img {
+        width: 23em;
+        height: 15em;
+        margin: 1em;
+        object-fit: cover;
         border-radius: 20px;
+    }
+    
+    & .description {
+        position: relative;
+        margin: 1em;
 
-        & img {
-            width: 23em;
-            height: 15em;
-            margin: 1em;
-            object-fit: cover;
-            border-radius: 20px;
-        }
-        
-        & .description {
-            position: relative;
-            margin: 1em;
-
-            & p {
-                margin: 0.5em 0;
-            }
+        & p {
+            margin: 0.5em 0;
         }
     }
+}
+
+.activityItem:hover {
+    box-shadow: none;
 }
 
 /* === Detail Section === */
@@ -247,22 +267,14 @@ section {
     }
 }
 
-/* === Submit Activity Section === */
+.aboutContent,
 .submitContent {
     & div {
         margin: 2em;
-        
-        & p {
-            max-width: 45ch;
-        }
     }
 }
 
 /* === Contact Section === */
-.contact-wrapper {
-    display: flex;
-}
-
 .contact-container {
     margin: 2em;
 
