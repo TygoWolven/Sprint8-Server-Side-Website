@@ -1,7 +1,9 @@
 <%- include('./partials/head', {current: '/initiatief'}); %>
 
-<!-- Home Section -->
+<!-- Detail Section -->
 <section id="detail">
+  <a href="/#activity"><button class="backBtn Btn capsLock extraBold">Terug</button></a>
+
   <% if (hallenData.image) { %>
       <img src="https://fdnd-agency.directus.app/assets/<%= hallenData.image %>">
   <% } %>

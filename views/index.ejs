@@ -6,36 +6,22 @@
   <section id="home">
 
     <!-- Title -->
-    <h1>Platform Buurtinitiatieven Amsterdam West</h1>
-
-  </section>
-
-  <!-- About Section -->
-  <section id="about">
-    <!-- Section Number -->
-    <p class="sectionNumber extraBold"
-       aria-hidden="true">
-       01
-    </p>
-
-    <div class="aboutContent flexLayout">
-      <img src="/images/dehallenscenery.jpg" alt="Sfeer in De Hallen">
+    <div class="titleWrapper">
       <div>
-        <!-- Section Tag -->
-        <p class="sectionTag capsLock extraBold" 
-           aria-hidden="true">
-           Over dit platform
-        </p>
-        <h2><span class="extraBold">Waarom</span> dit platform?</h2>
+        <h1><span class="extraThin">Platform</span><br>Buurtinitiatieven<br>Amsterdam West</h1>
         <p class="textArea">
-           Dit platform is gericht naar het aanbieden of aanvragen van diverse buurtinitiatieven. In de meeste gevallen 
-           is het moeilijk om de juiste persoon voor jouw klus te vinden, en daarom is dit platform ontwikkeld!
-        </p>
+          Dit platform is gericht naar het aanbieden of aanvragen van diverse buurtinitiatieven. In de meeste gevallen 
+          is het moeilijk om de juiste persoon voor jouw klus te vinden, en daarom is dit platform ontwikkeld!
+       </p>
       </div>
+      <div class="circle3D"><img src="/images/dehallenscenery.jpg" alt=""></div>
     </div>
 
   </section>
 
+  <section id="homecover">
+
+  </section>
 
   <!-- Activity Section -->
   <section id="activity">
@@ -48,11 +34,11 @@
     <!-- Section Number -->
     <p class="sectionNumber extraBold"
        aria-hidden="true">
-       02
+       01
     </p>
 
     <!-- Section Title -->
-    <h2>Bekijk onze <span class="extraBold">initiatieven</span></h2>
+    <h2><span class="extraThin">Bekijk onze</span> initiateven</h2>
 
     <ul class="activityList flexLayout">
       <% hallenData.forEach(function(database) { %>
@@ -76,7 +62,7 @@
             <p><%- database.short_description %></p>
           </div>
 
-          <a href="/initiatief/<%= database.id %>"><button class="infoButton capsLock extraBold">Meer informatie</button></a>
+          <a href="/initiatief/<%= database.id %>"><button class="Btn capsLock extraBold">Meer informatie</button></a>
         </li>
       <% }) %>
     </ul>
@@ -90,7 +76,7 @@
     <!-- Section Number -->
     <p class="sectionNumber extraBold"
        aria-hidden="true">
-       03
+       02
     </p>
 
     <!-- Section Title -->
@@ -101,7 +87,7 @@
            aria-hidden="true">
            Initiatief Aanvragen
         </p>
-        <h2>Ben je op zoek naar een <span class="extraBold">initiatief?</span></h2>
+        <h2><span class="extraThin">Ben je op zoek naar een</span> initiatief?</h2>
         <p class="textArea">
           Op zoek naar een balonnenclown? DJ voor een huisfeest? Het maakt niet uit wat! Vul dan het 
           formulier in, en wie weet vind je de juiste persoon waar jij naar op zoek bent.
@@ -114,7 +100,7 @@
           
           <h3>Voor wanneer?</h3>
           <textarea required name="bericht"></textarea> <br>
-          <button type="submit" id="submit-button">Aanvraag indienen</button>
+          <button type="submit" class="Btn capsLock extraBold">Aanvraag indienen</button>
         </form>
       </div>
     </div>
@@ -132,11 +118,11 @@
     <!-- Section Number -->
     <p class="sectionNumber extraBold"
        aria-hidden="true">
-       04
+       03
     </p>
 
     <!-- Section Title -->
-    <h2>Heb je <span class="extraBold">vragen?</span></h2>
+    <h2><span class="extraThin">Heb je</span> vragen?</h2>
 
     <!-- Contact Info -->
     <div class="contact-wrapper flexLayout">
