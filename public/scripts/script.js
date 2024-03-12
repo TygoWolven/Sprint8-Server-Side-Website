@@ -7,4 +7,3 @@ function openNav () {
     navBar.classList.toggle('openNav')
     buttonChevron.classList.toggle('rotateChevron')
 }
-
