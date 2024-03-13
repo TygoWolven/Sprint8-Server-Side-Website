@@ -6,7 +6,7 @@
   <section id="home">
 
     <!-- Title -->
-    <div class="titleWrapper">
+    <div class="titleWrapper flexLayout">
       <div>
         <h1 class="capsLock"><span class="extraThin">Platform</span><br>Buurtinitiatieven<br>Amsterdam West</h1>
         <p class="textArea">
@@ -14,14 +14,14 @@
           is het moeilijk om de juiste persoon voor jouw klus te vinden, en daarom is dit platform ontwikkeld!
        </p>
       </div>
-      <div class="circle3D"><img src="/images/dehallenscenery.jpg" alt="Sfeerimpressie van de Hallen voor de homepagina"></div>
+      <div class="circle3D flexLayout">
+        <img src="/images/dehallenscenery.jpg" alt="Sfeerimpressie van de Hallen voor de homepagina">
+      </div>
     </div>
 
   </section>
+  <section id="homecover"></section>
 
-  <section id="homecover">
-
-  </section>
 
   <!-- Activity Section -->
   <section id="activity">
@@ -109,7 +109,6 @@
         <% } %>
       <% }) %>
     </ul>
-
   </section>
 
 
@@ -124,7 +123,7 @@
 
     <!-- Section Title -->
     <div class="submitContent flexLayout">
-      <div class="alignRight">
+      <div class="alignRight flexLayout">
         <div>
           <!-- Section Tag -->
           <p class="sectionTag capsLock extraBold" 
@@ -138,7 +137,7 @@
           </p>  
         </div>  
       </div>
-      <div class="formWrapper">
+      <div class="formWrapper flexLayout">
         <form method="post" action="/">
           <h3>Wat heb je nodig?</h3>
           <textarea rows="3" cols="40" required name="bericht"></textarea> <br><br>

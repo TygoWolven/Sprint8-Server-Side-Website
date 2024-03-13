@@ -1,6 +1,6 @@
 /* === Fonts === */
 @font-face {
-    font-family: Inter;
+    font-family: Roboto;
     src: url(../fonts/RobotoCondensed-VariableFont_wght.ttf);
 }
 
@@ -33,7 +33,7 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 
-    font-family: Inter;
+    font-family: Roboto;
     color: var(--darkgrey);
     text-decoration: none;
     list-style: none;
@@ -78,6 +78,10 @@ a, i {
 
 h2 {
     margin: 0.5em 0;
+}
+
+.active {
+    box-shadow: var(--shadow);
 }
 
 section {
@@ -216,7 +220,6 @@ section {
 .titleWrapper {
     position: relative;
     align-items: center;
-    display: flex;
     width: 80%;
     height: 60%;
 
@@ -254,7 +257,6 @@ section {
     box-shadow: var(--shadow);
     justify-content: center;
     align-items: center;
-    display: flex;
 
     & img {
         width: 80%;
@@ -357,7 +359,6 @@ section {
     border-radius: 20px;
     justify-content: center;
     align-items: center;
-    display: flex;
     transition: var(--tran1);
     margin: 1em;
 
@@ -369,7 +370,6 @@ section {
 
 div.alignRight {
     position: relative;
-    display: flex;
     align-items: center;
     margin: 2em;
     
