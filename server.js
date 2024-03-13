@@ -19,14 +19,25 @@ app.use(express.static('public'))
 // Zorg dat werken met request data makkelijker wordt
 app.use(express.urlencoded({extended: true}))
 
+// Deze Array verzamelt berichten
+const messages = [] 
+
 // TODO: routes voor deze pizza applicatie..	
 app.get('/', function(request, response) {
 	fetchJson('https://fdnd-agency.directus.app/items/dh_services').then((HallenDataUitDeAPI) => {
 		response.render('index', {
-			hallenData: HallenDataUitDeAPI.data
+			hallenData: HallenDataUitDeAPI.data,
+			messages: messages
 		})
 	})
 })
+
+// Maak een POST route voor de index
+app.post('/', function (request, response) {
+	messages.push(request.body.bericht)
+	
+	response.redirect(303, '/')
+  })
 
 app.get('/initiatief/:initiatief', function(request, response) {
 	fetchJson('https://fdnd-agency.directus.app/items/dh_services?filter={"id":' + request.params.initiatief + '}').then((HallenDataUitDeAPI) => {
