@@ -210,6 +210,7 @@ section {
 
 #homecover {
     background: none;
+    box-shadow: var(--shadow);
 }
 
 .titleWrapper {
@@ -231,6 +232,14 @@ section {
     & div {
         margin-left: 10em;
     }
+}
+
+.stripedBackground {
+    background: linear-gradient( to right,
+    var(--lightgrey) 99%,
+    var(--grey) 99%
+    );
+    background-size: 60px;  
 }
 
 .circle3D {
@@ -261,6 +270,7 @@ section {
 #activity {
     height: fit-content;
     padding: 125px 0 200px 0;
+    box-shadow: -10px -10px 15px #6b717c49;
 }
 
 .activityList {
@@ -295,10 +305,12 @@ section {
     
     & .description {
         margin: 1em;
+    }
+}
 
-        & p {
-            margin: 0.5em 0;
-        }
+.description {
+    & p {
+        margin: 0.5em 0;
     }
 }
 
@@ -320,6 +332,12 @@ section {
     }
 }
 
+#detail {
+    & p {
+        max-width: 60%;
+    }
+}
+
 .activityItem:hover,
 .formWrapper:hover {
     box-shadow: none;
@@ -328,13 +346,6 @@ section {
 .Btn:hover {
     cursor: pointer;
     box-shadow: var(--shadow);
-}
-
-/* === Detail Section === */
-#detail {
-    & img {
-        width: 25em;
-    }
 }
 
 .formWrapper {
@@ -399,6 +410,7 @@ footer {
     position: relative;
     z-index: 100;
     box-shadow: var(--shadow) inset;
+
 
     & > div {
         padding: 4em;

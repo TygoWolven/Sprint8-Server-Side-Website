@@ -4,11 +4,9 @@
 <section id="detail">
   <a href="/#activity"><button class="backBtn Btn capsLock extraBold">Terug</button></a>
 
-  <% if (hallenData.image) { %>
-      <img src="https://fdnd-agency.directus.app/assets/<%= hallenData.image %>">
-  <% } %>
-  <div class="description">
-      <a href="/initiatief/<%= hallenData.id %>"><h3><%= hallenData.title %></h3></a>
+  <div class="titleWrapper stripedBackground">
+    <div class="description">
+      <a href="/initiatief/<%= hallenData.id %>"><h3 class="capsLock"><%= hallenData.title %></h3></a>
 
       <% if (hallenData.start_date) { %>
         <p>
@@ -20,8 +18,13 @@
       <% } %>
       
       <p><%- hallenData.long_description %></p>
+    </div>
+    <div class="circle3D">
+      <% if (hallenData.image) { %>
+        <img src="https://fdnd-agency.directus.app/assets/<%= hallenData.image %>">
+      <% } %>
+    </div>
   </div>
-  
 </section>
 
 <%- include('./partials/foot') %>
