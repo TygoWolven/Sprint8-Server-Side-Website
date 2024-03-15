@@ -28,10 +28,24 @@ Mijn pagina ziet er als volgt uit:
 Deze is ook live te bekijken: https://apricot-cygnet-kit.cyclic.app/
 
 ## Kenmerken
+
+### Code Tools
+Visual Studio Code <br>
+Google Chrome
+
+### Code Talen
+HTML <br>
+CSS <br>
+JS
+
+EJS <br>
+JSON <br>
+Node.JS<br>
+
 Ik maak gebruik van een onepage-layout. Hierbij heb ik verschillende sections waarmee ik ook de navigatie heb opgezet. De bedoeling hiervan is dat elke section zijn eigen onderwerp heeft, waardoor de pagina makkelijk op te zetten is, en alles mooi ruimtelijk opgezet staat.
 
 ## Installatie
-Je kan aan dit project verder werken door het te forken, en vervolgens te clonen naar je lokale apparaat. 
+Je kan aan dit project verder werken door het te forken, en vervolgens te clonen naar je lokale apparaat. Zodra je dit hebt gedaan is het belangerijk om in je Terminal (CTRL +  `) een 'npm install' uit te voeren. Hiermee maak je het mogelijk om een lokale server op te zetten om je veranderingen te bekijken. Deze lokale server start je door 'npm start'.
 
 ## Licentie
 
