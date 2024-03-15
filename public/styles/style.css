@@ -63,9 +63,6 @@
     max-width: 47ch;
 }
 
-.alignRight {
-    text-align: right;
-}
 
 /* === General Element Styling === */
 i {
@@ -146,6 +143,11 @@ section {
     color: var(--darkgrey);
     transition: var(--tran1);
     border-radius: var(--round);
+}
+
+.Btn:hover {
+    cursor: pointer;
+    box-shadow: var(--shadow);
 }
 
 .backBtn {
@@ -334,6 +336,7 @@ section {
     }
 }
 
+/* === Detailpage === */
 #detail {
     & p {
         max-width: 60%;
@@ -343,11 +346,6 @@ section {
 .activityItem:hover,
 .formWrapper:hover {
     box-shadow: none;
-}
-
-.Btn:hover {
-    cursor: pointer;
-    box-shadow: var(--shadow);
 }
 
 .formWrapper {
@@ -368,9 +366,10 @@ section {
     }
 }
 
-div.alignRight {
+.submitContent div {
     position: relative;
     align-items: center;
+    text-align: right;
     margin: 2em;
     
     & .sectionTag {
@@ -439,8 +438,3 @@ footer i:hover {
         }
     }
 }
-
-/* === Z-Index Usage === */
-/* sectionTag: 25 */
-/* Navigation: 100 */
-/* Footer: 100 */
