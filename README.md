@@ -17,6 +17,17 @@
 <!-- Voeg een mooie poster visual toe 📸 -->
 <!-- Voeg een link toe naar Github Pages 🌐-->
 
+![image](https://github.com/TygoWolven/Sprint8-Server-Side-Website/assets/144010858/6016eebd-8b53-4b5a-b6ab-6bebc0c880bf)
+
+![image](https://github.com/TygoWolven/Sprint8-Server-Side-Website/assets/144010858/deedb58a-fec4-4740-a473-497dec36da34)
+
+![image](https://github.com/TygoWolven/Sprint8-Server-Side-Website/assets/144010858/839a6d91-e145-4ff5-a6ce-ad347bedcda5)
+
+![image](https://github.com/TygoWolven/Sprint8-Server-Side-Website/assets/144010858/5a1fa785-1997-40d0-b4d6-9cb024219b7a)
+
+![image](https://github.com/TygoWolven/Sprint8-Server-Side-Website/assets/144010858/183124ce-4b95-40e0-a2a7-961b1e768d05)
+
+
 ## Gebruik
 <!--Bij Gebruik staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
 
