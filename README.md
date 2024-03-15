@@ -13,8 +13,7 @@ Deze pagina is bedoeld als een soort Marktplaats, maar dan voor diensten in de b
   * [Licentie](#licentie)
 
 ## Beschrijving
-<!-- In de Beschrijving staat kort beschreven wat voor project het is en wat je hebt gemaakt -->
-<!-- Voeg een link toe naar Github Pages 🌐-->
+Mijn pagina ziet er als volgt uit:
 
 ![image](https://github.com/TygoWolven/Sprint8-Server-Side-Website/assets/144010858/95c27169-4f52-41fa-8749-281c2e1c9fcf)
 
@@ -26,11 +25,13 @@ Deze pagina is bedoeld als een soort Marktplaats, maar dan voor diensten in de b
 
 ![image](https://github.com/TygoWolven/Sprint8-Server-Side-Website/assets/144010858/183124ce-4b95-40e0-a2a7-961b1e768d05)
 
+Deze is ook live te bekijken: https://apricot-cygnet-kit.cyclic.app/
+
 ## Kenmerken
-Ik maak gebruik van een onepage-layout. Hierbij heb ik verschillende sections waarmee ik ook de navigatie heb opgezet. De bedoeling hiervan is dat elke section zijn eigen onderwerp heeft.
+Ik maak gebruik van een onepage-layout. Hierbij heb ik verschillende sections waarmee ik ook de navigatie heb opgezet. De bedoeling hiervan is dat elke section zijn eigen onderwerp heeft, waardoor de pagina makkelijk op te zetten is, en alles mooi ruimtelijk opgezet staat.
 
 ## Installatie
-Je kan aan dit project verder werken door het te forken. 
+Je kan aan dit project verder werken door het te forken, en vervolgens te clonen naar je lokale apparaat. 
 
 ## Licentie
 
