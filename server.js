@@ -48,7 +48,7 @@ app.get('/initiatief/:initiatief', function(request, response) {
 })
 
 // Poortnummer voor de LocalHost
-app.set('port', process.env.PORT || 8000)
+app.set('port', process.env.PORT || 8001)
 
 // Start express op, haal daarbij het zojuist ingestelde poortnummer op
 app.listen(app.get('port'), function() {
